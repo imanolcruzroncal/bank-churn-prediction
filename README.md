@@ -97,3 +97,18 @@ Clone the repository:
 ```bash
 git clone <your-repository-url>
 cd bank-churn-prediction
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+
+Launch Jupyter Notebook:
+
+```bash
+jupyter notebook
+
+## Author
+
+Abraham Imanol Cruz Roncal
+Data Scientist
