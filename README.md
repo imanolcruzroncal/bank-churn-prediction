@@ -59,8 +59,8 @@ Target variable:
 
 ## 📈 Model Performance
 
-- Final F1-score: [Insert your score here]
-- ROC-AUC: [Insert your ROC-AUC here]
+- Final F1-score: 0.63
+- ROC-AUC: 0.86
 
 The final model met the minimum F1-score requirement and demonstrated strong discriminative performance.
 
