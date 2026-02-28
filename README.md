@@ -1,88 +1,119 @@
-# Bank Customer Churn Prediction
+🏦 Bank Customer Churn Prediction
 
-Machine learning project focused on predicting customer churn in the banking sector using classification models under class imbalance conditions.
+Machine Learning project focused on predicting customer churn in the banking sector using classification models under class imbalance conditions.
 
----
-
-## 📌 Project Overview
+📌 Project Overview
 
 Customer retention is significantly more cost-effective than customer acquisition. This project aims to predict whether a bank customer is likely to leave the institution based on historical behavioral and financial data.
 
 The primary objective was to build a classification model that maximizes the F1-score (minimum required: 0.59) while also evaluating model performance using the ROC-AUC metric.
 
----
+This project simulates a real-world churn prediction scenario under imbalanced class distribution (~80% non-churn vs ~20% churn).
 
-## 🎯 Objective
+📊 Dataset
 
-- Predict customer churn (Exited = 1)
-- Handle class imbalance effectively
-- Optimize F1-score
-- Compare performance using ROC-AUC
+10,000 customer records
 
----
+Numerical and categorical features
 
-## 📊 Dataset Description
+Target variable: Exited (1 = churn, 0 = retained)
 
-The dataset includes customer-level banking data such as:
+Key Features:
 
-- CreditScore
-- Geography
-- Gender
-- Age
-- Tenure
-- Balance
-- NumOfProducts
-- HasCrCard
-- IsActiveMember
-- EstimatedSalary
+CreditScore
 
-Target variable:
+Geography
 
-- Exited (1 = customer left, 0 = retained)
+Gender
 
----
+Age
 
-## 🛠 Methodology
+Tenure
 
-1. Data preprocessing and cleaning
-2. Exploratory Data Analysis (EDA)
-3. Class imbalance analysis
-4. Baseline model training (without imbalance correction)
-5. Imbalance handling techniques:
-   - Class weighting
-   - Oversampling (SMOTE)
-   - Undersampling
-6. Model comparison and hyperparameter tuning
-7. Final evaluation on test set
+Balance
 
----
+NumOfProducts
 
-## 📈 Model Performance
+IsActiveMember
 
-- Final F1-score: 0.63
-- ROC-AUC: 0.86
+🧠 Methodology
 
-The final model met the minimum F1-score requirement and demonstrated strong discriminative performance.
+1️⃣ Exploratory Data Analysis (EDA)
+2️⃣ Missing value treatment (median imputation for Tenure)
+3️⃣ Categorical encoding (Ordinal Encoding)
+4️⃣ Train / Validation / Test split
+5️⃣ Model comparison:
 
----
+🌲 RandomForestClassifier
 
-## 🧠 Key Insights
+📈 LogisticRegression
+6️⃣ Class imbalance handling:
 
-- Class imbalance significantly affected baseline performance.
-- Applying imbalance correction techniques improved recall and overall F1-score.
-- Feature importance analysis revealed that Age, Balance, and Activity Status were key churn drivers.
+⚖️ Class weighting
 
----
+🔁 Oversampling
+7️⃣ Hyperparameter tuning
+8️⃣ Final evaluation on test set
 
-## 🧰 Technologies Used
+🤖 Final Model
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib / Seaborn
-- Jupyter Notebook
+RandomForestClassifier
 
----
+max_depth = 6
 
-## 📁 Project Structure
+n_estimators = 40
+
+class_weight = 'balanced'
+
+📈 Model Performance (Test Set)
+
+🎯 F1-score: 0.59
+
+📊 ROC-AUC: 0.76
+
+The model demonstrates solid discriminative power and balanced performance between precision and recall under imbalanced data conditions.
+
+💼 Business Impact
+
+This model can function as an early warning system to:
+
+🚨 Identify high-risk customers
+
+🎯 Prioritize retention campaigns
+
+💰 Reduce unnecessary intervention costs
+
+📈 Improve customer lifetime value
+
+🛠 Technologies Used
+
+🐍 Python
+
+🐼 Pandas
+
+🔢 NumPy
+
+🤖 Scikit-learn
+
+📓 Jupyter Notebook
+
+🚀 How to Run
+
+Clone the repository:
+
+git clone <your-repository-url>
+cd bank-churn-prediction
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Launch Jupyter Notebook:
+
+jupyter notebook
+👨‍💻 Author
+
+Abraham Imanol Cruz Roncal
+Industrial Engineer
+Master’s in Engineering Management
+Data Science & Machine Learning Enthusiast
